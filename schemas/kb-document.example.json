@@ -1,0 +1,103 @@
+{
+  "doc_id": "SOP-RET-ELEC-0142",
+  "doc_type": "sop",
+  "title": "Processing Electronics Returns",
+  "source_url": "https://kb.internal.walmart.com/sop/ret-elec-0142",
+  "source_format": "html",
+  "ocr_applied": false,
+  "ocr_confidence": null,
+  "language": "en-US",
+  "category": ["Returns", "Electronics"],
+  "audience": ["customer_agent", "self_service_bot"],
+  "channel": ["online", "in_store", "phone"],
+  "region": ["US"],
+
+  "governance": {
+    "owner": "returns-policy-team",
+    "approval_status": "approved",
+    "effective_date": "2026-06-01",
+    "expiration_date": null,
+    "version": 4,
+    "supersedes": "SOP-RET-ELEC-0139",
+    "superseded_by": null,
+    "sensitivity": "public",
+    "last_modified": "2026-08-14T10:22:00Z"
+  },
+
+  "blocks": [
+    {
+      "block_id": "b1",
+      "block_type": "eligibility_criteria",
+      "order": 1,
+      "parent_block_id": null,
+      "heading_path": ["Processing Electronics Returns", "Eligibility"],
+      "text": "Electronics may be returned within 30 days of purchase with the original receipt or proof of purchase. Items must be unopened or include all original accessories and packaging.",
+      "html": "<div class=\"eligibility\"><h3>Eligibility</h3><p>Electronics may be returned within <strong>30 days</strong> of purchase with the original receipt or proof of purchase.</p><ul><li>Item must be unopened, <em>or</em></li><li>Include all original accessories and packaging</li></ul></div>",
+      "block_source": "html_heuristic"
+    },
+    {
+      "block_id": "b2",
+      "block_type": "procedure_steps",
+      "order": 2,
+      "parent_block_id": null,
+      "heading_path": ["Processing Electronics Returns", "Procedure"],
+      "text": "Steps to process the return.",
+      "html": "<div class=\"procedure\"><h3>Procedure</h3><ol class=\"steps\"></ol></div>",
+      "block_source": "html_heuristic"
+    },
+    {
+      "block_id": "b2-s1",
+      "block_type": "step",
+      "order": 1,
+      "parent_block_id": "b2",
+      "heading_path": ["Processing Electronics Returns", "Procedure", "Step 1"],
+      "text": "Verify the receipt or order lookup and confirm the purchase date is within 30 days.",
+      "html": "<li id=\"step-1\">Verify the receipt or order lookup and confirm the purchase date is within <strong>30 days</strong>.</li>",
+      "block_source": "html_heuristic"
+    },
+    {
+      "block_id": "b2-s2",
+      "block_type": "step",
+      "order": 2,
+      "parent_block_id": "b2",
+      "heading_path": ["Processing Electronics Returns", "Procedure", "Step 2"],
+      "text": "Inspect the item for completeness: original packaging, cables, and accessories.",
+      "html": "<li id=\"step-2\">Inspect the item for completeness: original packaging, cables, and accessories.</li>",
+      "block_source": "html_heuristic"
+    },
+    {
+      "block_id": "b3",
+      "block_type": "exception",
+      "order": 3,
+      "parent_block_id": "b2",
+      "heading_path": ["Processing Electronics Returns", "Exceptions"],
+      "text": "If the item exceeds $500 in value and is missing the receipt, do not process at the register — escalate to a Returns Specialist.",
+      "html": "<div class=\"callout callout-warning\"><h4>⚠ Exception</h4><p>If the item exceeds <strong>$500</strong> in value and is missing the receipt, <strong>do not process at the register</strong> — escalate to a Returns Specialist.</p></div>",
+      "block_source": "html_heuristic"
+    },
+    {
+      "block_id": "b4",
+      "block_type": "escalation",
+      "order": 4,
+      "parent_block_id": "b3",
+      "heading_path": ["Processing Electronics Returns", "Escalation"],
+      "text": "Escalate to Returns Specialist queue via the Associate Support Tool, case type 'High-Value No-Receipt Return'.",
+      "html": "<p class=\"escalation\">Escalate to <a href=\"/tools/associate-support\">Returns Specialist queue</a> via the Associate Support Tool, case type <code>High-Value No-Receipt Return</code>.</p>",
+      "block_source": "html_heuristic"
+    }
+  ],
+
+  "entities": [
+    { "entity_type": "time_window", "value": 30, "unit": "days", "source_block_id": "b1", "confidence": 0.98 },
+    { "entity_type": "dollar_threshold", "value": 500, "unit": "USD", "source_block_id": "b3", "confidence": 0.95 },
+    { "entity_type": "required_document", "value": "original receipt or proof of purchase", "unit": null, "source_block_id": "b1", "confidence": 0.9 }
+  ],
+
+  "relations": [
+    { "predicate": "SUPERSEDES", "object": "SOP-RET-ELEC-0139", "source": "cms_structural", "confidence": 1.0 },
+    { "subject": "b2-s1", "predicate": "PART_OF", "object": "b2", "source": "component_derived", "confidence": 1.0 },
+    { "subject": "b3", "predicate": "EXCEPTION_TO", "object": "b1", "source": "component_derived", "confidence": 1.0 },
+    { "subject": "b4", "predicate": "ESCALATES_TO", "object": "TOOL:associate-support-tool", "source": "component_derived", "confidence": 1.0 },
+    { "predicate": "REFERENCES", "object": "POLICY-RET-GEN-001", "source": "llm_inferred", "confidence": 0.72 }
+  ]
+}

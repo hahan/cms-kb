@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.walmart.kbpoc</groupId>
+  <artifactId>kb-poc</artifactId>
+  <version>0.1.0</version>
+  <packaging>jar</packaging>
+
+  <properties>
+    <maven.compiler.release>21</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <milvus.sdk.version>2.4.5</milvus.sdk.version>
+    <jsoup.version>1.17.2</jsoup.version>
+    <jackson.version>2.17.2</jackson.version>
+    <djl.version>0.29.0</djl.version>
+    <slf4j.version>2.0.13</slf4j.version>
+  </properties>
+
+  <dependencies>
+    <!-- Milvus Java SDK -->
+    <dependency>
+      <groupId>io.milvus</groupId>
+      <artifactId>milvus-sdk-java</artifactId>
+      <version>${milvus.sdk.version}</version>
+    </dependency>
+
+    <!-- HTML parsing/cleaning -->
+    <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
+      <version>${jsoup.version}</version>
+    </dependency>
+
+    <!-- JSON -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <!-- Local embeddings: DJL + ONNX Runtime engine + HuggingFace tokenizers -->
+    <dependency>
+      <groupId>ai.djl</groupId>
+      <artifactId>api</artifactId>
+      <version>${djl.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>ai.djl.huggingface</groupId>
+      <artifactId>tokenizers</artifactId>
+      <version>${djl.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>ai.djl.onnxruntime</groupId>
+      <artifactId>onnxruntime-engine</artifactId>
+      <version>${djl.version}</version>
+    </dependency>
+
+    <!-- In-memory graph for relations -->
+    <dependency>
+      <groupId>org.jgrapht</groupId>
+      <artifactId>jgrapht-core</artifactId>
+      <version>1.5.2</version>
+    </dependency>
+
+    <!-- Logging (Milvus SDK / DJL use slf4j) -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.3.0</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>

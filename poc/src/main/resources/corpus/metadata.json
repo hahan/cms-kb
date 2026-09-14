@@ -1,0 +1,200 @@
+[
+  {
+    "docId": "ret-elec-v2",
+    "docType": "policy",
+    "title": "Electronics Returns Policy",
+    "sourceUrl": "https://kb.internal.walmart.com/returns/electronics",
+    "category": ["Returns", "Electronics"],
+    "region": ["US"],
+    "governance": {
+      "owner": "returns-policy-team",
+      "approvalStatus": "approved",
+      "effectiveDate": "2026-06-01",
+      "expirationDate": null,
+      "version": 2,
+      "supersedes": "ret-elec-v1",
+      "supersededBy": null,
+      "sensitivity": "public"
+    }
+  },
+  {
+    "docId": "ret-elec-v1",
+    "docType": "policy",
+    "title": "Electronics Returns Policy",
+    "sourceUrl": "https://kb.internal.walmart.com/returns/electronics?v=1",
+    "category": ["Returns", "Electronics"],
+    "region": ["US"],
+    "governance": {
+      "owner": "returns-policy-team",
+      "approvalStatus": "approved",
+      "effectiveDate": "2025-01-01",
+      "expirationDate": "2026-05-31",
+      "version": 1,
+      "supersedes": null,
+      "supersededBy": "ret-elec-v2",
+      "sensitivity": "public"
+    }
+  },
+  {
+    "docId": "ret-marketplace",
+    "docType": "policy",
+    "title": "Marketplace Items Return Policy",
+    "sourceUrl": "https://kb.internal.walmart.com/returns/marketplace",
+    "category": ["Returns", "Marketplace"],
+    "region": ["US"],
+    "governance": {
+      "owner": "marketplace-policy-team",
+      "approvalStatus": "approved",
+      "effectiveDate": "2025-03-01",
+      "expirationDate": null,
+      "version": 1,
+      "supersedes": null,
+      "supersededBy": null,
+      "sensitivity": "public"
+    }
+  },
+  {
+    "docId": "ret-general",
+    "docType": "policy",
+    "title": "General Merchandise Return Policy",
+    "sourceUrl": "https://kb.internal.walmart.com/returns/general",
+    "category": ["Returns", "General Merchandise"],
+    "region": ["US"],
+    "governance": {
+      "owner": "returns-policy-team",
+      "approvalStatus": "approved",
+      "effectiveDate": "2025-02-01",
+      "expirationDate": null,
+      "version": 1,
+      "supersedes": null,
+      "supersededBy": null,
+      "sensitivity": "public"
+    }
+  },
+  {
+    "docId": "sop-elec-returns",
+    "docType": "sop",
+    "title": "SOP: Processing Electronics Returns",
+    "sourceUrl": "https://kb.internal.walmart.com/sop/electronics-returns",
+    "category": ["Returns", "Electronics"],
+    "region": ["US"],
+    "governance": {
+      "owner": "returns-ops-team",
+      "approvalStatus": "approved",
+      "effectiveDate": "2026-06-01",
+      "expirationDate": null,
+      "version": 3,
+      "supersedes": null,
+      "supersededBy": null,
+      "sensitivity": "public"
+    }
+  },
+  {
+    "docId": "faq-returns-elec",
+    "docType": "faq",
+    "title": "FAQ: Electronics Returns",
+    "sourceUrl": "https://kb.internal.walmart.com/faq/electronics-returns",
+    "category": ["Returns", "Electronics"],
+    "region": ["US"],
+    "governance": {
+      "owner": "cx-content-team",
+      "approvalStatus": "approved",
+      "effectiveDate": "2026-01-15",
+      "expirationDate": null,
+      "version": 1,
+      "supersedes": null,
+      "supersededBy": null,
+      "sensitivity": "public"
+    }
+  },
+  {
+    "docId": "policy-window-conflict-a",
+    "docType": "policy",
+    "title": "Electronics Accessories Return Window",
+    "sourceUrl": "https://kb.internal.walmart.com/returns/electronics-accessories",
+    "category": ["Returns", "Electronics", "Accessories"],
+    "region": ["US"],
+    "governance": {
+      "owner": "returns-policy-team",
+      "approvalStatus": "approved",
+      "effectiveDate": "2025-08-01",
+      "expirationDate": null,
+      "version": 1,
+      "supersedes": null,
+      "supersededBy": null,
+      "sensitivity": "public"
+    }
+  },
+  {
+    "docId": "policy-window-conflict-b",
+    "docType": "policy",
+    "title": "Small Electronics Accessories Policy",
+    "sourceUrl": "https://kb.internal.walmart.com/returns/small-electronics-accessories",
+    "category": ["Returns", "Electronics", "Accessories"],
+    "region": ["US"],
+    "governance": {
+      "owner": "store-ops-team",
+      "approvalStatus": "approved",
+      "effectiveDate": "2024-11-01",
+      "expirationDate": null,
+      "version": 1,
+      "supersedes": null,
+      "supersededBy": null,
+      "sensitivity": "public"
+    }
+  },
+  {
+    "docId": "faq-price-match",
+    "docType": "faq",
+    "title": "FAQ: Price Match Policy",
+    "sourceUrl": "https://kb.internal.walmart.com/faq/price-match",
+    "category": ["Price Match"],
+    "region": ["US"],
+    "governance": {
+      "owner": "cx-content-team",
+      "approvalStatus": "approved",
+      "effectiveDate": "2025-05-01",
+      "expirationDate": null,
+      "version": 1,
+      "supersedes": null,
+      "supersededBy": null,
+      "sensitivity": "public"
+    }
+  },
+  {
+    "docId": "faq-delivery",
+    "docType": "faq",
+    "title": "FAQ: Delivery & Shipping",
+    "sourceUrl": "https://kb.internal.walmart.com/faq/delivery",
+    "category": ["Delivery"],
+    "region": ["US"],
+    "governance": {
+      "owner": "cx-content-team",
+      "approvalStatus": "approved",
+      "effectiveDate": "2025-05-01",
+      "expirationDate": null,
+      "version": 1,
+      "supersedes": null,
+      "supersededBy": null,
+      "sensitivity": "public"
+    }
+  },
+  {
+    "docId": "policy-membership-returns",
+    "docType": "policy",
+    "title": "Walmart+ Membership Extended Returns",
+    "sourceUrl": "https://kb.internal.walmart.com/returns/membership-extended",
+    "category": ["Returns", "Membership", "Electronics"],
+    "region": ["US"],
+    "governance": {
+      "owner": "membership-team",
+      "approvalStatus": "approved",
+      "effectiveDate": "2025-09-01",
+      "expirationDate": null,
+      "version": 1,
+      "supersedes": null,
+      "supersededBy": null,
+      "sensitivity": "public"
+    }
+  }
+]

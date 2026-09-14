@@ -1,0 +1,44 @@
+[
+  {
+    "subject": "ret-elec-v2",
+    "predicate": "SUPERSEDES",
+    "object": "ret-elec-v1",
+    "source": "cms_structural",
+    "confidence": 1.0
+  },
+  {
+    "subject": "faq-returns-elec",
+    "predicate": "REFERENCES",
+    "object": "ret-elec-v2",
+    "source": "cms_structural",
+    "confidence": 1.0
+  },
+  {
+    "subject": "faq-returns-elec",
+    "predicate": "REFERENCES",
+    "object": "sop-elec-returns",
+    "source": "cms_structural",
+    "confidence": 1.0
+  },
+  {
+    "subject": "sop-elec-returns",
+    "predicate": "REFERENCES",
+    "object": "ret-elec-v2",
+    "source": "cms_structural",
+    "confidence": 1.0
+  },
+  {
+    "subject": "policy-membership-returns",
+    "predicate": "REFERENCES",
+    "object": "ret-elec-v2",
+    "source": "cms_structural",
+    "confidence": 1.0
+  },
+  {
+    "subject": "policy-window-conflict-a",
+    "predicate": "CONTRADICTS",
+    "object": "policy-window-conflict-b",
+    "source": "llm_inferred",
+    "confidence": 0.81
+  }
+]

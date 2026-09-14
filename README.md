@@ -9,7 +9,11 @@ help resolve customer issues.
 - [Design document](docs/design.md) — problem statement, architecture,
   document schema, chunking/indexing strategy, knowledge graph design,
   multi-format (HTML/PDF/TXT) ingestion, governance.
-- [POC milestones & tasks](docs/milestones.md)
+- [POC scope](docs/poc-scope.md) — the smaller, first POC: prove the
+  schema/graph approach beats cleaned-HTML-into-Milvus before committing to
+  the full build
+- [POC milestones & tasks](docs/milestones.md) — the full build, once the POC
+  above validates the approach
 - [`schemas/kb-document.schema.json`](schemas/kb-document.schema.json) — the
   derived document index schema (JSON Schema)
 - [`schemas/kb-document.example.json`](schemas/kb-document.example.json) —

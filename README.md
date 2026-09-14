@@ -20,4 +20,6 @@ help resolve customer issues.
   worked example
 - [`poc/`](poc/) — the working POC implementation (Java + Milvus + local
   embeddings + Anthropic API for block segmentation). **Result: baseline
-  6/9, enhanced 8/9** on the fixed query set — see [`poc/README.md`](poc/README.md)
+  6/9, enhanced 9/9** on the fixed query set — see [`poc/README.md`](poc/README.md)
+- [`docs/learnings.md`](docs/learnings.md) — what the POC results actually
+  showed and why, and the fixes made in response (the category-aware filter)

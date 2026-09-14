@@ -50,8 +50,18 @@ nav/footer/script noise) plus:
 
 ## Latest result
 
-**Baseline: 6/9. Enhanced: 8/9.** See [`output/comparison.md`](output/comparison.md)
-for the full per-query breakdown.
+**Baseline: 6/9. Enhanced: 9/9.** See [`output/comparison.md`](output/comparison.md)
+for the full per-query breakdown, and [`../docs/learnings.md`](../docs/learnings.md)
+for the reasoning behind each fix below.
+
+- **Category-aware filter (`CategoryRouter.java`) fixed Q2.** The freshness
+  filter alone wasn't enough to stop a near-duplicate sub-category
+  ("Electronics > Accessories") from outscoring the correct general
+  electronics policy on raw similarity. A deterministic keyword-based query
+  router -- if the query doesn't mention a sub-category's keywords, exclude
+  results tagged with it -- fixed this with no regressions elsewhere. It's a
+  hardcoded rule tied to this corpus's taxonomy, not a general solution; see
+  `docs/learnings.md` for the honest limitation.
 
 - **Q1's scoring was corrected after inspecting the actual retrieved text.**
   It originally showed baseline FAILing because its top hit was
@@ -72,20 +82,17 @@ for the full per-query breakdown.
   illustration that block-level ranking isn't perfect either. Scoring
   pass/fail at the block level (not just the document level) would be a
   reasonable next refinement rather than something to paper over here.
-- **Q2 -- the one enhanced miss, and it's a genuine, useful finding, not a
-  scripted failure.** The freshness filter worked exactly as designed: the
+- **Q2 -- originally the one enhanced miss, now fixed, kept here for the
+  history.** The freshness filter worked exactly as designed: the
   superseded v1 policy (`ret-elec-v1`, 14-day window) was correctly excluded
   from enhanced's results by the `superseded_by == ""` scalar filter. But a
   *different* near-duplicate then won on pure similarity --
   `policy-window-conflict-a` ("Electronics Accessories Return Window") scored
   higher than the actual electronics policy for the query "what's the return
   window for electronics?", because "accessories return window" is lexically
-  very close to the query. This is exactly the disambiguation failure mode
-  the design set out to fix, showing up in a form the thin POC slice didn't
-  fully solve: heading-breadcrumb embeddings help a lot (see Q1), but don't
-  guarantee category disambiguation on their own. A fuller build would add
-  an explicit category-aware retrieval step (see `docs/design.md` section 7)
-  rather than relying on embedding proximity alone.
+  very close to the query. Heading-breadcrumb embeddings alone didn't
+  guarantee category disambiguation. This is exactly what `CategoryRouter.java`
+  (see above) was built to fix, and it now passes.
 - **Q5, Q6** -- baseline cannot answer these at all; there's no vector-search
   equivalent of "what contradicts this" or "what references this." Enhanced
   answers both correctly via graph traversal.
@@ -100,6 +107,7 @@ for the full per-query breakdown.
   for the full build.
 - Block `html` field is a normalized re-wrap (semantic wrapper + entity
   bolding), not a verbatim slice of the original markup.
-- No query-understanding/NLU layer for category filters -- enhanced relies on
-  heading-breadcrumb-prefixed embeddings plus one always-on freshness filter,
-  which is precisely what Q2 shows is not yet sufficient on its own.
+- `CategoryRouter.java` is a hardcoded keyword rule, not an NLU layer or
+  learned classifier -- it fixes the one disambiguation failure mode found
+  so far, but won't generalize to unseen categories or phrasings without
+  someone maintaining the keyword map. See `docs/learnings.md`.

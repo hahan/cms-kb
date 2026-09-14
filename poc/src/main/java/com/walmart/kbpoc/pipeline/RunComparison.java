@@ -42,7 +42,7 @@ public class RunComparison {
                 if (q.kind == QuerySpec.Kind.VECTOR) {
                     float[] vec = embedder.embed(q.text);
                     List<SearchHit> baseHits = Searchers.searchBaseline(client, vec, 3);
-                    List<SearchHit> enhHits = Searchers.searchEnhanced(client, vec, 3);
+                    List<SearchHit> enhHits = Searchers.searchEnhanced(client, q.text, vec, 3);
 
                     SearchHit baseTop = baseHits.isEmpty() ? null : baseHits.get(0);
                     SearchHit enhTop = enhHits.isEmpty() ? null : enhHits.get(0);

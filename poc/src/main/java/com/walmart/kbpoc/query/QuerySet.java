@@ -11,7 +11,7 @@ public final class QuerySet {
                 QuerySpec.vector("Q1",
                         "Can I return this TV without a receipt?",
                         "Must select the electronics policy/SOP, not marketplace or general merchandise",
-                        Set.of("ret-elec-v2", "sop-elec-returns"),
+                        Set.of("ret-elec-v2", "sop-elec-returns", "faq-returns-elec"),
                         Set.of("ret-marketplace", "ret-general")),
 
                 QuerySpec.vector("Q2",
@@ -23,7 +23,7 @@ public final class QuerySet {
                 QuerySpec.vector("Q3",
                         "Customer wants to return a $600 laptop with no receipt, what do I do?",
                         "Must surface the exception/escalation clause, not just the general eligibility rule",
-                        Set.of("ret-elec-v2", "sop-elec-returns"),
+                        Set.of("ret-elec-v2", "sop-elec-returns", "faq-returns-elec"),
                         Set.of("ret-marketplace", "ret-general")),
 
                 QuerySpec.vector("Q4",

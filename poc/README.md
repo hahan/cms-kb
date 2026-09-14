@@ -50,12 +50,28 @@ nav/footer/script noise) plus:
 
 ## Latest result
 
-**Baseline: 5/9. Enhanced: 8/9.** See [`output/comparison.md`](output/comparison.md)
+**Baseline: 6/9. Enhanced: 8/9.** See [`output/comparison.md`](output/comparison.md)
 for the full per-query breakdown.
 
-- **Q1, Q3** -- both pipelines eventually land on the right electronics
-  content, but enhanced returns the exact block (`eligibility_criteria`,
-  `exception`) rather than baseline's whole-FAQ chunk.
+- **Q1's scoring was corrected after inspecting the actual retrieved text.**
+  It originally showed baseline FAILing because its top hit was
+  `faq-returns-elec` rather than the policy/SOP docs I'd pre-approved. But
+  that FAQ text is a genuinely correct answer ("order lookup can substitute
+  for a receipt... escalate per the Electronics Returns SOP for high-value
+  items") -- the named trap for Q1 (marketplace/general confusion) never
+  actually happened; baseline correctly ranked both of those out. The FAIL
+  was an artifact of too strict an accepted-answer list, not a real retrieval
+  failure, so `faq-returns-elec` was added to Q1's (and, for consistency,
+  Q3's) accepted set in `QuerySet.java` and the comparison was regenerated.
+  Same reasoning applies to Q3, though it didn't change that query's result.
+- One nuance that's real but intentionally *not* scored: on Q1, enhanced's
+  top-ranked block is the general `eligibility_criteria` clause (0.610),
+  narrowly ahead of the more specific `exception` block (0.585) that
+  actually addresses "no receipt." Both belong to the correct document, so
+  this passes on the doc-level check the harness uses -- but it's a good
+  illustration that block-level ranking isn't perfect either. Scoring
+  pass/fail at the block level (not just the document level) would be a
+  reasonable next refinement rather than something to paper over here.
 - **Q2 -- the one enhanced miss, and it's a genuine, useful finding, not a
   scripted failure.** The freshness filter worked exactly as designed: the
   superseded v1 policy (`ret-elec-v1`, 14-day window) was correctly excluded

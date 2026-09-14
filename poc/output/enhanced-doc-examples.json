@@ -1,0 +1,166 @@
+[ {
+  "doc_id" : "ret-elec-v2",
+  "doc_type" : "policy",
+  "title" : "Electronics Returns Policy",
+  "source_format" : "html",
+  "category" : [ "Returns", "Electronics" ],
+  "region" : [ "US" ],
+  "governance" : {
+    "effective_date" : "2026-06-01",
+    "version" : 2,
+    "supersedes" : "ret-elec-v1",
+    "superseded_by" : null,
+    "sensitivity" : "public"
+  },
+  "blocks" : [ {
+    "block_id" : "ret-elec-v2-b1",
+    "block_type" : "intro",
+    "order" : 1,
+    "heading_path" : "Electronics Returns Policy > Electronics Returns Policy",
+    "text" : "This policy covers returns of televisions, computers, tablets, phones, cameras, and other electronic devices purchased from Walmart, whether in-store or online.",
+    "html" : "<div class=\"block-intro\"><h4>Electronics Returns Policy</h4><p>This policy covers returns of televisions, computers, tablets, phones, cameras, and other electronic devices purchased from Walmart, whether in-store or online.</p></div>",
+    "block_source" : "html_heuristic"
+  }, {
+    "block_id" : "ret-elec-v2-b2",
+    "block_type" : "eligibility_criteria",
+    "order" : 2,
+    "heading_path" : "Electronics Returns Policy > Eligibility",
+    "text" : "Electronics may be returned within 30 days of purchase with the original receipt or proof of purchase. Items must be unopened, or include all original accessories, cables, and packaging. Items showing signs of physical damage not present at time of sale are not eligible for return.",
+    "html" : "<div class=\"block-eligibility_criteria\"><h4>Eligibility</h4><p>Electronics may be returned within <strong>30 days</strong> of purchase with the original receipt or proof of purchase. Items must be unopened, or include all original accessories, cables, and packaging. Items showing signs of physical damage not present at time of sale are not eligible for return.</p></div>",
+    "block_source" : "html_heuristic"
+  }, {
+    "block_id" : "ret-elec-v2-b3",
+    "block_type" : "exception",
+    "order" : 3,
+    "heading_path" : "Electronics Returns Policy > High-value items without a receipt",
+    "text" : "If the item exceeds $500 in value and the customer does not have a receipt or other proof of purchase, do not process the return at the register.",
+    "html" : "<div class=\"block-exception\"><h4>High-value items without a receipt</h4><p>If the item exceeds <strong>$500</strong> in value and the customer does not have a receipt or other proof of purchase, do not process the return at the register.</p></div>",
+    "block_source" : "html_heuristic"
+  }, {
+    "block_id" : "ret-elec-v2-b4",
+    "block_type" : "escalation",
+    "order" : 4,
+    "heading_path" : "Electronics Returns Policy > High-value items without a receipt",
+    "text" : "Escalate to a Returns Specialist for manual verification.",
+    "html" : "<div class=\"block-escalation\"><h4>High-value items without a receipt</h4><p>Escalate to a Returns Specialist for manual verification.</p></div>",
+    "block_source" : "html_heuristic"
+  }, {
+    "block_id" : "ret-elec-v2-b5",
+    "block_type" : "disclaimer",
+    "order" : 5,
+    "heading_path" : "Electronics Returns Policy > Restocking Fees",
+    "text" : "No restocking fee applies to electronics returned within the eligibility window in original condition.",
+    "html" : "<div class=\"block-disclaimer\"><h4>Restocking Fees</h4><p>No restocking fee applies to electronics returned within the eligibility window in original condition.</p></div>",
+    "block_source" : "html_heuristic"
+  } ]
+}, {
+  "doc_id" : "sop-elec-returns",
+  "doc_type" : "sop",
+  "title" : "SOP: Processing Electronics Returns",
+  "source_format" : "html",
+  "category" : [ "Returns", "Electronics" ],
+  "region" : [ "US" ],
+  "governance" : {
+    "effective_date" : "2026-06-01",
+    "version" : 3,
+    "supersedes" : null,
+    "superseded_by" : null,
+    "sensitivity" : "public"
+  },
+  "blocks" : [ {
+    "block_id" : "sop-elec-returns-b1",
+    "block_type" : "intro",
+    "order" : 1,
+    "heading_path" : "SOP: Processing Electronics Returns > SOP: Processing Electronics Returns",
+    "text" : "Use this procedure at the register or customer service desk when a customer requests to return an electronics item. See the Electronics Returns Policy for eligibility rules.",
+    "html" : "<div class=\"block-intro\"><h4>SOP: Processing Electronics Returns</h4><p>Use this procedure at the register or customer service desk when a customer requests to return an electronics item. See the Electronics Returns Policy for eligibility rules.</p></div>",
+    "block_source" : "html_heuristic"
+  }, {
+    "block_id" : "sop-elec-returns-b2",
+    "block_type" : "procedure_steps",
+    "order" : 2,
+    "heading_path" : "SOP: Processing Electronics Returns > Procedure",
+    "text" : "Steps for processing an electronics return at the register or customer service desk.",
+    "html" : "<div class=\"block-procedure_steps\"><h4>Procedure</h4><p>Steps for processing an electronics return at the register or customer service desk.</p></div>",
+    "block_source" : "html_heuristic"
+  }, {
+    "block_id" : "sop-elec-returns-b3",
+    "block_type" : "step",
+    "order" : 3,
+    "heading_path" : "SOP: Processing Electronics Returns > Step 1",
+    "text" : "Look up the order or verify the receipt, and confirm the purchase date is within the eligibility window.",
+    "html" : "<div class=\"block-step\"><h4>Step 1</h4><p>Look up the order or verify the receipt, and confirm the purchase date is within the eligibility window.</p></div>",
+    "block_source" : "html_heuristic"
+  }, {
+    "block_id" : "sop-elec-returns-b4",
+    "block_type" : "step",
+    "order" : 4,
+    "heading_path" : "SOP: Processing Electronics Returns > Step 2",
+    "text" : "Inspect the item for completeness: original packaging, cables, and accessories.",
+    "html" : "<div class=\"block-step\"><h4>Step 2</h4><p>Inspect the item for completeness: original packaging, cables, and accessories.</p></div>",
+    "block_source" : "html_heuristic"
+  }, {
+    "block_id" : "sop-elec-returns-b5",
+    "block_type" : "step",
+    "order" : 5,
+    "heading_path" : "SOP: Processing Electronics Returns > Step 3",
+    "text" : "Confirm the item shows no signs of damage beyond normal wear.",
+    "html" : "<div class=\"block-step\"><h4>Step 3</h4><p>Confirm the item shows no signs of damage beyond normal wear.</p></div>",
+    "block_source" : "html_heuristic"
+  }, {
+    "block_id" : "sop-elec-returns-b6",
+    "block_type" : "step",
+    "order" : 6,
+    "heading_path" : "SOP: Processing Electronics Returns > Step 4",
+    "text" : "If eligible, process the return in the POS system and issue the refund to the original payment method.",
+    "html" : "<div class=\"block-step\"><h4>Step 4</h4><p>If eligible, process the return in the POS system and issue the refund to the original payment method.</p></div>",
+    "block_source" : "html_heuristic"
+  }, {
+    "block_id" : "sop-elec-returns-b7",
+    "block_type" : "exception",
+    "order" : 7,
+    "heading_path" : "SOP: Processing Electronics Returns > Exception",
+    "text" : "If the item exceeds $500 in value and the customer has no receipt or other proof of purchase, do not process the return at the register.",
+    "html" : "<div class=\"block-exception\"><h4>Exception</h4><p>If the item exceeds <strong>$500</strong> in value and the customer has no receipt or other proof of purchase, do not process the return at the register.</p></div>",
+    "block_source" : "html_heuristic"
+  }, {
+    "block_id" : "sop-elec-returns-b8",
+    "block_type" : "escalation",
+    "order" : 8,
+    "heading_path" : "SOP: Processing Electronics Returns > Escalation",
+    "text" : "Escalate to the Returns Specialist queue via the Associate Support Tool, case type High-Value No-Receipt Return. Provide the item description, estimated value, and reason the customer could not produce a receipt.",
+    "html" : "<div class=\"block-escalation\"><h4>Escalation</h4><p>Escalate to the Returns Specialist queue via the Associate Support Tool, case type High-Value No-Receipt Return. Provide the item description, estimated value, and reason the customer could not produce a receipt.</p></div>",
+    "block_source" : "html_heuristic"
+  } ]
+}, {
+  "doc_id" : "policy-window-conflict-a",
+  "doc_type" : "policy",
+  "title" : "Electronics Accessories Return Window",
+  "source_format" : "html",
+  "category" : [ "Returns", "Electronics", "Accessories" ],
+  "region" : [ "US" ],
+  "governance" : {
+    "effective_date" : "2025-08-01",
+    "version" : 1,
+    "supersedes" : null,
+    "superseded_by" : null,
+    "sensitivity" : "public"
+  },
+  "blocks" : [ {
+    "block_id" : "policy-window-conflict-a-b1",
+    "block_type" : "intro",
+    "order" : 1,
+    "heading_path" : "Electronics Accessories Return Window > Electronics Accessories Return Window",
+    "text" : "This policy addresses returns of electronics accessories including cables, chargers, cases, and headphones purchased alongside or separately from a primary electronics device.",
+    "html" : "<div class=\"block-intro\"><h4>Electronics Accessories Return Window</h4><p>This policy addresses returns of electronics accessories including cables, chargers, cases, and headphones purchased alongside or separately from a primary electronics device.</p></div>",
+    "block_source" : "html_heuristic"
+  }, {
+    "block_id" : "policy-window-conflict-a-b2",
+    "block_type" : "eligibility_criteria",
+    "order" : 2,
+    "heading_path" : "Electronics Accessories Return Window > Eligibility",
+    "text" : "Electronics accessories may be returned within 30 days of purchase with proof of purchase, in unused condition with original packaging.",
+    "html" : "<div class=\"block-eligibility_criteria\"><h4>Eligibility</h4><p>Electronics accessories may be returned within <strong>30 days</strong> of purchase with proof of purchase, in unused condition with original packaging.</p></div>",
+    "block_source" : "html_heuristic"
+  } ]
+} ]
